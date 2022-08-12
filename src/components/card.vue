@@ -11,8 +11,8 @@ const count = ref(0);
 </script>
 <template>
   <div
-      v-for="(val, index) in cards"
-      :key="index"
+    v-for="(val, index) in cards"
+    :key="index"
   >
     <div
       v-for="(valss, v_index) in val"
