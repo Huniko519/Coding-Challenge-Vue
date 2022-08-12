@@ -11,7 +11,7 @@ const count = ref(0);
 </script>
 <template>
   <div
-    v-for="(val, index) in cards"
+    v-for="(val, index) in getcardValues"
     :key="index"
   >
     <div
@@ -31,6 +31,11 @@ export default {
   data() {
     return {
       cards: []
+    }
+  },
+  computed: {
+    getcardValues() {
+      return this.cards
     }
   },
   watch: { 

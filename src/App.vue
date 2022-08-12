@@ -11,14 +11,14 @@
       <div class="flex items-center p-1">
         <div>Generate</div>
         <div class="px-2">
-          <input type="text" class="w-9 p-2.5" placeholder="X" v-model="x_count" @input="$emit('update:x_count', $event.target.value)"/>
+          <input type="text" class="w-9 p-2.5" placeholder="X" v-model="x_count"/>
         </div>
         <div>rabdiom cards, </div>
       </div>
       <div class="flex items-center p-1">
         <div>each with</div>
         <div class="px-2">
-          <input type="text" class="w-9 p-2.5" placeholder="Y" v-model="y_count" @input="$emit('update:y_count', $event.target.value)" />
+          <input type="text" class="w-9 p-2.5" placeholder="Y" v-model="y_count"/>
         </div>
         <div>row/columns</div>
       </div>
@@ -53,11 +53,6 @@
         activeClass: 'bg-blue-400 hover:bg-blue-500',
         disabledClass: 'bg-grey-400'
       };
-    },
-    computed: {
-        tripInfo() {
-            return this.$store.getters.tripInfo
-        },
     },
     mounted() {
       this.handleInput()
